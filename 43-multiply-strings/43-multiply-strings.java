@@ -5,7 +5,7 @@ class Solution {
         BigInteger str2 = new BigInteger(num2);
         
         BigInteger ans = str1.multiply(str2);
-        return String.valueOf(ans);
-        // ans.toString();
+        return String.valueOf(ans); // convert string to int
+        // return ans.toString(); // this one also
     }
 }
