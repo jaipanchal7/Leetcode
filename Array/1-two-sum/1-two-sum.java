@@ -7,15 +7,13 @@ class Solution {
         
         for(int i = 0; i < nums.length; i++){
             if(map.containsKey(target - nums[i])){
-                result[1] = i;
                 result[0] = map.get(target - nums[i]);
+                result[1] = i;
 
                 return result;
             }
-            
             map.put(nums[i], i);
         }
-        
         return result;
         
         
