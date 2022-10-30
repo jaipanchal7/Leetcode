@@ -27,7 +27,6 @@ class Solution {
         
         ListNode endNode = prev;
         ListNode temp = endNode;
-         
         
         int i=1;
         while(temp!=null){
