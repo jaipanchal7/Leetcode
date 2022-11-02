@@ -44,7 +44,8 @@ class Solution {
         
         return dummy.next;
         
-        
+    }   
+}
         
         
         
@@ -101,7 +102,7 @@ class Solution {
         // System.out.println(reverse);
         // System.out.println(arr);
         // return l1;       
-    }
+    // }
     
     // public String add1(ListNode list1){
     //     String sum1 = "";
@@ -148,5 +149,5 @@ class Solution {
 //             prev = curr;
 //             curr = forw;
 //         }
-//         return prev;        
-}
+//         return prev;    
+// }
