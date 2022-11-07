@@ -23,15 +23,15 @@ public class Solution {
         //     x =  (x != null) ? x.next : headB;
         //     y =  (y != null) ? y.next : headA;
         // }
-        while (x != y) {
-            if(x!=null){
-                x = x.next;
-            }else
+        while (x!=y) {
+            if(x==null)
                 x = headB;
-            if(y!=null){
-                y = y.next;
-            }else
+            else
+                x = x.next;
+            if(y==null)
                 y = headA;
+            else
+                y = y.next;
         }
         return x;
     }
