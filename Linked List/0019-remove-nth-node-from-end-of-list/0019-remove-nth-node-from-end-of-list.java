@@ -14,10 +14,12 @@ class Solution {
         if(head==null || head.next==null){
             return null;
         }
+        
         ListNode prev = null;
         ListNode curr = head;
         ListNode forw;
         
+        // reverse a linked list
         while(curr!=null){
             forw = curr.next;
             curr.next = prev;
@@ -25,25 +27,29 @@ class Solution {
             curr = forw;
         }
         
-        ListNode endNode = prev;
-        ListNode temp = endNode;
+        ListNode endNode = prev; // starting node of reverse linked list
+        ListNode temp = endNode; // temp pointing to endNode
         
         int i=1;
         while(temp!=null){
-            if(n==1){
+            if(n==1){ // shift our node one step ahead and break
                 endNode = temp.next;
                 break;
             }
-            if(i==n-1){
+            
+            if(i==n-1){ // find just previous node from target
                 temp.next = temp.next.next;
             }else
-            temp = temp.next;
+                temp = temp.next;
+            
             i++;
         }
+        
         ListNode prev1 = null;
         ListNode curr1 = endNode;
         ListNode forw1;
         
+        // reverse a linked list to main a linked list
         while(curr1!=null){
             forw1 = curr1.next;
             curr1.next = prev1;
