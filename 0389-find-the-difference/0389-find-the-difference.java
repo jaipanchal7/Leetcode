@@ -1,21 +1,29 @@
 class Solution {
     public char findTheDifference(String s, String t) {
         
-        char addChar = 0;
-    
-        int i=0;
-        while(i<s.length()){
-            addChar ^= s.charAt(i);
-            i++;            
+        int s1=0,s2=0;
+        
+        for(int i=0; i<s.length(); i++){
+            s1 = s1 + s.charAt(i);
         }
-
-        int j=0;
-        while(j<t.length()){
-            addChar ^= t.charAt(j);
-            j++;            
+        for(int i=0;i<t.length();i++){
+            s2 = s2 + t.charAt(i);
         }
-
-        return addChar;
+        return (char) (s2-s1);
+        
+        
+        // char addChar = 0;
+        // int i=0;
+        // while(i<s.length()){
+        //     addChar ^= s.charAt(i);
+        //     i++;            
+        // }
+        // int j=0;
+        // while(j<t.length()){
+        //     addChar ^= t.charAt(j);
+        //     j++;            
+        // }
+        // return addChar;
 
         
 //         HashSet<String> hs = new HashSet<>();
