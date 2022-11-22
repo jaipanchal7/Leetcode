@@ -18,16 +18,26 @@ class Solution {
         
         ListNode revNextToMid = reverse(nextToMid);
         
-        ListNode temp = head;
-        ListNode ans;
+        ListNode ans = head;
+        ListNode temp;
         
-        while(temp!=null && revNextToMid!=null){
-            ans = temp.next;
-            temp.next = revNextToMid;
+        while(ans!=null && revNextToMid!=null){
+//             temp = ans.next;
+//             ans.next = revNextToMid;
             
-            temp = revNextToMid;
-            revNextToMid = ans;
-        }        
+//             ans = revNextToMid;
+//             revNextToMid = temp;
+            
+            temp = ans.next;
+            ans.next = revNextToMid;
+            ans = temp;
+
+            // System.out.println(ans.val);
+            
+            temp = revNextToMid.next;
+            revNextToMid.next = ans;
+            revNextToMid = temp;
+        }    
     }
     
     public ListNode findmid(ListNode head){
