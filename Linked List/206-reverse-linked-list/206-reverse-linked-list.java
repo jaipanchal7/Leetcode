@@ -19,7 +19,6 @@ class Solution {
         ListNode curr = head;
         ListNode forward = null;
         
-        
         while(curr!=null){
             forward = curr.next;
             curr.next = prev;
@@ -28,7 +27,6 @@ class Solution {
         }
         head = prev;
         return head;               
-        
     }
 
     // Using recursion
