@@ -30,4 +30,20 @@ class Solution {
         return head;               
         
     }
+
+    // Using recursion
+//     public ListNode reverseList(ListNode head) {
+//         if(head == null){
+//             return head;
+//         }
+//         return reverseListNodes(null, head);
+//     }
+    
+//     public ListNode reverseListNodes(ListNode prev, ListNode curr){
+//         if(curr == null)
+//             return prev;
+//         ListNode forward = curr.next;
+//         curr.next = prev;
+//         return reverseListNodes(curr, forward);
+//     }
 }
