@@ -4,10 +4,11 @@ class Solution {
         int res=1,c=1;
         
         for(int i=0; i<s.length()-1; i++){
-            if(s.charAt(i)==s.charAt(i+1))
+            if(s.charAt(i)==s.charAt(i+1)){
                 c++;
-            else{
                 res = Math.max(res,c);
+            }
+            else{
                 c = 1;
             }
         }
