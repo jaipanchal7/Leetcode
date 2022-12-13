@@ -10,7 +10,7 @@ class Solution {
         if (m == 1 && n == 1) 
             return 1;
 
-        if (arr[m][n] != 0) 
+        if (arr[m][n]!= 0) 
             return arr[m][n];
         
         arr[m][n] = helper(m - 1, n, arr) + helper(m, n - 1, arr);
