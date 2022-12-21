@@ -1,4 +1,5 @@
 class Solution {
+    // Recursive
     public int numberOfSteps(int num) {
         return helper(num, 0);
     }
@@ -13,4 +14,14 @@ class Solution {
         
         return helper(num - 1, steps + 1);
     }
+    
+    // Iterative
+    // public int numberOfSteps(int num) {
+    //     int count = 0;
+    //     while (num > 0) {
+    //         num = num % 2 == 0 ? num / 2 : num - 1;
+    //         count++;
+    //     }
+    //     return count;
+    // }
 }
